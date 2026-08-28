@@ -1,0 +1,48 @@
+Hoja de estilos trivial 
+principal:
+8789C0
+45F0DF
+C2CAE8
+8380B6
+111D4A
+
+historia
+
+
+geografía
+
+Prompt para pedir preguntas:
+
+Actúa como un docente experto en diseño curricular. Necesito que generes un banco de preguntas en formato JavaScript para el juego "Trivia School", siguiendo estrictamente la estructura técnica que te muestro a continuación.
+
+DATOS DE LA SOLICITUD:
+- Grado: [Ejemplo: 5° Grado]
+- Materia: [Ejemplo: Ciencias Naturales / Ciencias Sociales]
+- Unidades / Temas a abarcar: [Lista aquí los temas o capítulos del libro]
+- Cantidad de rondas: [Ejemplo: 3 rondas]
+- Cantidad de preguntas por ronda: 5 preguntas por ronda.
+
+REGLAS DE FORMATO Y ESTRUCTURA OBLIGATORIAS:
+
+1. Cada pregunta debe ser un objeto con estas 5 propiedades exactas:
+   - pregunta: (String) La pregunta clara y concisa.
+   - opciones: (Array de 3 Strings) Exactamente 3 opciones de respuesta.
+   - respuestaCorrecta: (Número 0, 1 o 2) El índice de la opción correcta.
+   - explicacion: (String) Una breve justificación pedagógica de la respuesta.
+   - tema: (String) El título exacto del tema/subtema para sugerir al alumno en caso de error.
+
+2. Nombrado de variables:
+   - Asigna cada ronda a una constante con el patrón: banco[Materia]_[Grado]_Ronda[N]
+   (Ejemplo: const bancoNaturales_5_Ronda1 = [...];)
+
+3. Vinculación al objeto global:
+   Al final del código, incluye SIEMPRE la inicialización segura para evitar errores de carga:
+
+   window.bancoGrado[NÚMERO_GRADO] = window.bancoGrado[NÚMERO_GRADO] || {};
+   window.bancoGrado[NÚMERO_GRADO].[materia] = [
+       banco[Materia]_[Grado]_Ronda1,
+       banco[Materia]_[Grado]_Ronda2,
+       ...
+   ];
+
+4. Devuelve ÚNICAMENTE el código JavaScript dentro de un bloque de código, listo para copiar y pegar en el archivo correspondiente.

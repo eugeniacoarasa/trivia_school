@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia School</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="game-container" id="game-container">
+        <div id="card-content">
+            <h2 style="font-size: 4rem; letter-spacing: 10px;">TRIVIA SCHOOL</h2>
+            <p class="subtitle-tag">¡Aprende jugando!</p>
+            <p>Pon a prueba tus conocimientos escolares</p>
+            <button class="neon-button" id="start-btn" onclick="showGradeSelection()">ELEGIR GRADO</button>
+        </div>
+    </div>
+
+    <footer class="app-footer">
+        Creado con ❤️ <a href="https://github.com/eugeniacoarasa" target="_blank">EugeniaCoarasa</a>
+    </footer>
+
+    <div class="top-right-menu">
+        <button class="menu-icon-btn" id="btn-sound" title="Sonido ON/OFF">🔊</button>
+        <button class="menu-icon-btn" id="btn-fullscreen" title="Pantalla Completa">⛶</button>
+        <button class="menu-icon-btn" id="btn-help" title="Ayuda / Cómo Jugar">❓</button>
+    </div>
+
+    <!-- Archivos de preguntas por año -->
+    <script src="preguntas_3.js"></script>
+    <script src="preguntas_4.js"></script>
+    <script src="preguntas_5.js"></script>
+    <script src="preguntas_6.js"></script>
+    <!-- Lógica principal -->
+    <script src="script.js"></script>
+</body>
+
+</html>
